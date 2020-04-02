@@ -55,5 +55,21 @@ makes changes
 git add * , git commit
 git push origin feature1
 
+this pushes feature1 to its branch in github.
+  - it does not make changes to the master branch.
+  - we can either do
+     - git merge feature1 inside the master branch
+     - or create a pull request in github.
+
+
+we can then make a pull request which stages changes from feature1 to master.
+
+the github actions will now run the tests.
+   - if success, we can confirm the merge to master
+   - if fails, we can cancel and delete the pull from feature1 to master.
+
+
+
+
 
 . . .
