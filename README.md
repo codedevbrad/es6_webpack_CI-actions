@@ -25,7 +25,24 @@ git status -uno - tells if you're ahead, behind , diverged.
 makes change to readme in /master
 git status
    - modified Readme
-
+git commit and push
 switch to branch /feature1 with git checkout
+
+git pull origin master - gets changes from master
+
+========================================
+
+// delete branch locally
+git branch -d localBranchName
+
+// delete branch remotely
+git push origin --delete remoteBranchName
+
+========================================
+    making changes from outside master
+
+git branch master
+
+git remote update
 
 . . .
