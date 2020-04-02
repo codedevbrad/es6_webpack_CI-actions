@@ -17,8 +17,15 @@ pushing updates
 
 ========================================
 
-steps
-   - add jest 
+git checkout -b feature1 - creates a branch and switched to it.
+git remote update - bring the branch up to date
 
+git status -uno - tells if you're ahead, behind , diverged.
+-----------
+makes change to readme in /master
+git status
+   - modified Readme
+
+switch to branch /feature1 with git checkout
 
 . . .
