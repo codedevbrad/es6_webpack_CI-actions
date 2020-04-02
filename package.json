@@ -5,7 +5,8 @@
   "main": "server",
   "scripts": {
     "test:service1": "jest dev/tests1 --watchAll" ,
-    "test:service2": "jest dev/tests2 --watchAll"
+    "test:service2": "jest dev/tests2 --watchAll",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
