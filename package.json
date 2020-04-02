@@ -1,0 +1,15 @@
+{
+  "name": "03.-webpack_github_actions",
+  "version": "1.0.0",
+  "description": "take the webpack structure from:",
+  "main": "server",
+  "scripts": {
+    "test:service1": "jest dev/tests1 --watchAll" ,
+    "test:service2": "jest dev/tests2 --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.2.6"
+  }
+}
