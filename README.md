@@ -45,4 +45,6 @@ git branch master
 
 git remote update
 
+(changes from outside the master branch )
+
 . . .
