@@ -41,9 +41,11 @@ git push origin --delete remoteBranchName
 ========================================
     making changes from outside master
 
-git branch master
+git checkout master
 
 git remote update
+
+git pull
 
 
 . . .
