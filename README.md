@@ -46,6 +46,14 @@ git checkout master
 git remote update
 
 git pull
+==========================================
+
+git checkout feature1
+
+makes changes
+
+git add * , git commit
+git push origin feature1
 
 
 . . .
