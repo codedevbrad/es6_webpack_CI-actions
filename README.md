@@ -45,5 +45,5 @@ git branch master
 
 git remote update
 
-( my changes )
+
 . . .
