@@ -1,19 +1,17 @@
-take the webpack structure from:
-
-- es6_sorting_searching.
-- mapbox_viewer project.
-
-========================================
 
 follow webpack and babel tutorials.
   - images , html , css.
 
 acamind (youtube) and net-ninja (youtube)
 
+- upon each compile of webpack , delete the existing dist folder
+   - https://github.com/Amaimersion/remove-files-webpack-plugin
+
+========================================
 ========================================
 
-add unit testing and github workflow with git actions used before
-pushing updates
+add the webpack build command to build first.
+then use the unit testing to test my code.
 
 ========================================
 
