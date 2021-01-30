@@ -2,11 +2,12 @@ var path = require('path');
 var ExtractTextPlugin  = require('extract-text-webpack-plugin');
 var TerserPlugin       = require('terser-webpack-plugin');
 var HtmlWebpackPlugin  = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
      watch: true ,
-     entry:  { index: './dev/env_js/control_main.js' } ,
+     entry:  { 'setup': './dev/env_js/control_main.js'  ,
+               'index.first' : './dev/env_js/control_edits'
+     } ,
      output: {
           path: path.resolve(__dirname, 'dist'),
           filename: './build/[name].js'
@@ -41,25 +42,25 @@ module.exports = {
                   }
                 }
               ]
-            } ,
-            {
-              test: /\.html$/,
-              use: [
-                {
-                  loader: 'file-loader' ,
-                  options: {
-                    name: '[name].[ext]' ,
-                  }
-                }
-              ] ,
-              exclude: path.resolve(__dirname, 'dev/index.html')
             }
         ]
      } ,
      plugins: [
-        new CleanWebpackPlugin() , 
         new ExtractTextPlugin({ filename: '/css/appbundle.css' }) ,
-        new HtmlWebpackPlugin({ filename: 'index.html' , template: 'dev/index.html' }) ,
+        new HtmlWebpackPlugin({
+            title: 'My Awesome application',
+            myPageHeader: 'Hello World',
+            template: 'dev/index.html',
+            chunks:   [ 'setup' ],
+            filename: 'index.html' //relative to root of the application
+        }) ,
+        new HtmlWebpackPlugin({
+            title: 'My Awesome application',
+            myPageHeader: 'Hello World',
+            template: 'dev/other.html',
+            chunks:   [ 'setup' , 'index.first' ],
+            filename: 'other.html' //relative to root of the application
+        })
      ] ,
      optimization: {
         minimize: true,

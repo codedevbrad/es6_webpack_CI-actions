@@ -5,7 +5,6 @@
   "main": "server",
   "scripts": {
     "test:service1": "jest dev/env_tests --watchAll",
-    "test:service2": "jest dev/env_tests --watchAll",
     "test": "jest",
     "build": "webpack -d --watch",
     "start:dev": "webpack-dev-server --open",
